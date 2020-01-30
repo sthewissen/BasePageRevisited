@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Grid x:Name="appFrame" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Foodie.Controls.AppFrame" RowSpacing="0" ColumnSpacing="0">
+    <Grid.RowDefinitions>
+        <RowDefinition x:Name="StatusRowDefinition" Height="0" />
+        <RowDefinition x:Name="MenuRow" Height="Auto" />
+        <RowDefinition Height="*" />
+        <RowDefinition x:Name="MainMenuRow" Height="Auto" />
+    </Grid.RowDefinitions>
+
+    <ContentView x:Name="ContentGrid" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="2" Content="{Binding Source={x:Reference appFrame},Path=Content}" />
+
+</Grid>
