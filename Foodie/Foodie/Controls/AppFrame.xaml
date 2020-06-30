@@ -1,5 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Grid x:Name="appFrame" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Foodie.Controls.AppFrame" RowSpacing="0" ColumnSpacing="0">
+<Grid x:Name="appFrame" xmlns="http://xamarin.com/schemas/2014/forms"
+      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+      xmlns:custom="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+      x:Class="Foodie.Controls.AppFrame" RowSpacing="0" ColumnSpacing="0"
+      BackgroundColor="#573850">
+
     <Grid.RowDefinitions>
         <RowDefinition x:Name="StatusRowDefinition" Height="0" />
         <RowDefinition x:Name="MenuRow" Height="Auto" />
@@ -7,6 +12,29 @@
         <RowDefinition x:Name="MainMenuRow" Height="Auto" />
     </Grid.RowDefinitions>
 
-    <ContentView x:Name="ContentGrid" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="2" Content="{Binding Source={x:Reference appFrame},Path=Content}" />
+    <Grid Grid.Row="1" HeightRequest="60" BackgroundColor="#ffffff">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <Button Grid.Column="0" HorizontalOptions="Start" FontFamily="IcoFont" FontSize="22" Text="&#xefe7;" BackgroundColor="Transparent" TextColor="#573850" />
+        <Label Grid.Column="1" Text="{Binding Title, Source={x:Reference appFrame}}" FontSize="20" FontFamily="Quicksand-Bold" TextColor="#573850" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" />
+        <Button Grid.Column="2" HorizontalOptions="End" FontFamily="IcoFont" FontSize="22" Text="&#xec82;" BackgroundColor="Transparent" TextColor="#573850" />
+    </Grid>
+
+    <custom:PancakeView Grid.Row="2" BackgroundColor="#ffffff" CornerRadius="0,0,20,20" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <Grid>
+            <ContentView x:Name="ContentGrid" Content="{Binding Source={x:Reference appFrame},Path=Content}" />
+        </Grid>
+    </custom:PancakeView>
+
+    <Grid Grid.Row="3" BackgroundColor="#573850" HeightRequest="60">
+        <Button Grid.Column="0" FontFamily="IcoFont" FontSize="22" Text="&#xef47;" BackgroundColor="Transparent" TextColor="#ffffff" />
+        <Button Grid.Column="1" FontFamily="IcoFont" FontSize="22" Text="&#xef74;" BackgroundColor="Transparent" TextColor="#ffffff" />
+        <Button Grid.Column="2" FontFamily="IcoFont" FontSize="22" Text="&#xef45;" BackgroundColor="Transparent" TextColor="#ffffff" />
+        <Button Grid.Column="3" FontFamily="IcoFont" FontSize="22" Text="&#xec8e;" BackgroundColor="Transparent" TextColor="#ffffff" />
+    </Grid>
 
 </Grid>

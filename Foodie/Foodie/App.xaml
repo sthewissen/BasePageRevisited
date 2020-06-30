@@ -2,22 +2,7 @@
 <Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="Foodie.App">
     <Application.Resources>
         <ResourceDictionary>
-            <OnPlatform x:TypeArguments="x:String" x:Key="Icofont">
-                <On Platform="iOS" Value="icofont"/>
-                <On Platform="Android" Value="icofont.ttf#Regular"/>
-            </OnPlatform>
-            <OnPlatform x:TypeArguments="x:String" x:Key="FieldworkGeoLight">
-                <On Platform="iOS" Value="Fieldwork-GeoLight"/>
-                <On Platform="Android" Value="Fieldwork7GeoLight.otf#Regular"/>
-            </OnPlatform>
-            <OnPlatform x:TypeArguments="x:String" x:Key="FieldworkGeoBold">
-                <On Platform="iOS" Value="Fieldwork-GeoBold"/>
-                <On Platform="Android" Value="Fieldwork16GeoBold.otf#Bold"/>
-            </OnPlatform>
-            <OnPlatform x:TypeArguments="x:String" x:Key="FieldworkGeoRegular">
-                <On Platform="iOS" Value="Fieldwork-GeoRegular"/>
-                <On Platform="Android" Value="Fieldwork10GeoRegular.otf#Regular"/>
-            </OnPlatform>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

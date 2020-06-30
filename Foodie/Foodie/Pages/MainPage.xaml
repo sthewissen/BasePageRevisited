@@ -1,9 +1,40 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Foodie.Controls" x:Class="Foodie.Pages.MainPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Foodie.Controls"
+             xmlns:ext="clr-namespace:Foodie"
+             xmlns:pagemodels="clr-namespace:Foodie.PageModels"
+             x:Class="Foodie.Pages.MainPage">
 
-    <local:AppFrame x:DataType="{x:Type pagemodels:MainPageModel}">
+    <local:AppFrame x:DataType="{x:Type pagemodels:MainPageModel}" Title="Meals">
         <local:AppFrame.Content>
+            <Grid Padding="0,16">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="8" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="60" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
 
+                    <Label Grid.Column="0" HorizontalTextAlignment="Center" HorizontalOptions="Center"
+                           TextColor="#573850" Text="fruits" FontFamily="Quicksand-Regular" />
+
+                    <Label Grid.Column="1" HorizontalTextAlignment="Center" HorizontalOptions="Center"
+                           TextColor="#573850" Text="vegetables" FontFamily="Quicksand-Bold" />
+
+                    <Label Grid.Column="2" HorizontalTextAlignment="Center" HorizontalOptions="Center"
+                           TextColor="#573850" Text="berries" FontFamily="Quicksand-Regular" />
+
+                </Grid>
+
+                <Image Grid.Row="2" HorizontalOptions="Fill" Margin="0,0,0,16" Aspect="AspectFit"
+                       Source="{ext:ImageResource Foodie.Resources.Images.corn.png}" />
+
+                <Button Grid.Row="3" HeightRequest="54" CornerRadius="27" Text="View Meals" Padding="32,0"
+                        FontFamily="Quicksand-Bold" BackgroundColor="#f05869" TextColor="#ffffff"
+                        VerticalOptions="Center" HorizontalOptions="Center" />
+            </Grid>
         </local:AppFrame.Content>
     </local:AppFrame>
 </ContentPage>

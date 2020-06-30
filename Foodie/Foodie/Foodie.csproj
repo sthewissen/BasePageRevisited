@@ -1,24 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DebugType>portable</DebugType>
-    <DebugSymbols>true</DebugSymbols>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.4.0.991537" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
-    <PackageReference Include="FreshMvvm" Version="3.0.0" />
-    <PackageReference Include="Xamarin.Forms.PancakeView" Version="1.3.7" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Pages\" />
-    <Folder Include="PageModels\" />
-    <Folder Include="Controls\" />
-  </ItemGroup>
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <DebugType>portable</DebugType>
+        <DebugSymbols>true</DebugSymbols>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Xamarin.Forms" Version="4.7.0.968" />
+        <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
+        <PackageReference Include="FreshMvvm" Version="3.0.0" />
+        <PackageReference Include="Xamarin.Forms.PancakeView" Version="1.4.2" />
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="Pages\" />
+        <Folder Include="PageModels\" />
+        <Folder Include="Controls\" />
+        <Folder Include="Resources\" />
+        <Folder Include="Resources\Fonts\" />
+        <Folder Include="Resources\Images\" />
+    </ItemGroup>
+    <ItemGroup>
+        <EmbeddedResource Include="Resources\Fonts\Quicksand-Bold.ttf" />
+        <EmbeddedResource Include="Resources\Fonts\Quicksand-Regular.ttf" />
+        <EmbeddedResource Include="Resources\Fonts\icofont.ttf" />
+        <EmbeddedResource Include="Resources\Images\corn.png" />
+    </ItemGroup>
+    <ItemGroup>
+      <None Remove="Resources\Fonts\icofont.ttf" />
+      <None Remove="Resources\Images\corn.png" />
+    </ItemGroup>
 </Project>
