@@ -7,7 +7,7 @@ namespace Foodie.Controls
     //[ContentProperty(nameof(Content))]
     public partial class AppFrame : Grid
     {
-        public static readonly BindableProperty TitleProperty = BindableProperty.Create(nameof(Content), typeof(string), typeof(AppFrame), default(string));
+        public static readonly BindableProperty TitleProperty = BindableProperty.Create(nameof(Title), typeof(string), typeof(AppFrame), default(string));
 
         public string Title
         {
